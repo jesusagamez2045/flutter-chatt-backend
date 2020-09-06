@@ -75,7 +75,7 @@ const login = async (req, res = response) => {
         res.json({
             ok: true,
             msg: 'Login correcto',
-            usuarioDB,
+            usuario : usuarioDB,
             token
         });   
     } catch (error) {

@@ -1,6 +1,5 @@
 const express = require('express');
 const path = require('path');
-const router = require('./routes/auth');
 require('dotenv').config();
 
 // DB config
@@ -25,7 +24,9 @@ app.use(express.static(publicPath));
 
 
 // mis rutas
-app.use('/api/login', router);
+app.use('/api/login', require('./routes/auth'));
+app.use('/api/usuarios', require('./routes/usuarios'));
+app.use('/api/mensajes', require('./routes/mensajes'));
 
 
 
